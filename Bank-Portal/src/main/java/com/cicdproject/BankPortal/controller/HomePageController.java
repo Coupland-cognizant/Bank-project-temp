@@ -31,7 +31,7 @@ public class HomePageController {
 			params = {"signupEMail", "signupPass"},
     		method = RequestMethod.POST,
 			produces = MediaType.TEXT_HTML_VALUE)
-    public String signupPage(@RequestParam("signupEMail") String loginEMail, @RequestParam("loginPass") String loginPass) {
+    public String signupPage(@RequestParam("signupEMail") String signupEMail, @RequestParam("signupPass") String signupPass) {
 		return HTMLUtils.getHtmlFromFile("src/main/resources/static/under-construction.html");
 	}
 }
