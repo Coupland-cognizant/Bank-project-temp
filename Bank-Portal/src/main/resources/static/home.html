@@ -1,0 +1,53 @@
+<html>
+	<head>
+		<title>CDJKMPR Banking</title>
+		<link rel="stylesheet" href="style.css"/>
+	</head>
+	<body>
+		<div class="banner">
+			<p class="logo">CDJKMPR Banking</p>
+		</div>
+		
+		<div class="spacer"></div>
+				
+		<div class="content">
+			<div class="loginFormContainer">
+				<form method="POST" action="/login" id="loginForm">
+					<p class="center">Log In:</p>
+					<div class="table">
+						<div class="row">
+							<span class="label">Email:</span>
+							<input id="loginEMail"/>
+						</div>
+						<div class="row">
+							<span class="label">Password:</span>
+							<input id="loginPass"/>
+						</div>
+					</div>
+					<input type="submit" value="Log In">
+				</form>
+			</div>
+			
+			<div class="signupFormContainer">
+				<form method="POST" action="/signup" id="signupForm">
+					<p class="center">Sign Up:</p>
+					<div class="table">
+						<div class="row">
+							<span class="label">Email:</span>
+							<input id="signupEMail"/>
+						</div>
+						<div class="row">
+							<span class="label">Password:</span>
+							<input id="signupPass"/>
+						</div>
+					</div>
+					<input type="submit" value="Sign Up">
+				</form>
+			</div>
+		</div>
+		
+		<div class="footer">
+			<p class="copyright">&copy; CDJKMPR Banking</p>
+		</div>
+	</body>
+</html>

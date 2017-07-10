@@ -1,0 +1,80 @@
+body, p {
+	margin: 0;
+}
+
+body {
+	background-color: aliceblue;
+}
+
+.banner, .footer {
+	background-color: lightblue;
+	width: 100vw;
+}
+
+.footer {
+	position: absolute;
+	bottom: 0;
+}
+
+.logo, .copyright {
+	margin: 0;
+	padding: 1em;
+	color: white;
+	font-family: Verdana;
+	text-shadow:
+ 		-1px -1px 0 dodgerblue,  
+ 		1px -1px 0 dodgerblue,
+ 		-1px 1px 0 dodgerblue,
+  		1px 1px 0 dodgerblue;
+}
+
+.logo {
+	font-size: x-large;
+	font-weight: bold;
+}
+
+.copyright {
+	text-align: right;
+}
+
+.content {
+	text-align: center;
+	font-family: Garamond;
+}
+
+.signupFormcontainer, .loginFormContainer {
+	display: inline-block;
+	background-color: white;
+	margin-left: 0.5em;
+	margin-right: 0.5em;
+}
+
+.signupFormContainer, .loginFormContainer {
+	box-shadow: 0px 2px 4px lightslategrey;
+}
+
+.banner, .footer {
+	box-shadow: 0px 0px 8px lightslategrey;
+}
+#signupForm, #loginForm {
+	margin: 0;
+	padding: 0.5em;
+}
+
+.spacer {
+	height: 15vh;
+}
+
+.table {
+	display: table;
+}
+
+.row {
+	display: table-row;
+	height: 1.5em;
+}
+
+.label {
+	display: table-cell;
+	text-align: right;
+}
