@@ -24,6 +24,7 @@ public class HomePageController {
     		method = RequestMethod.POST,
 			produces = MediaType.TEXT_HTML_VALUE)
     public String loginPage(@RequestParam("loginEMail") String loginEMail, @RequestParam("loginPass") String loginPass) {
+		System.out.println("Signup - Email: " + loginEMail + ", Password: " + loginPass);
 		return HTMLUtils.getHtmlFromFile("src/main/resources/static/under-construction.html");
 	}
 	
@@ -32,6 +33,7 @@ public class HomePageController {
     		method = RequestMethod.POST,
 			produces = MediaType.TEXT_HTML_VALUE)
     public String signupPage(@RequestParam("signupEMail") String signupEMail, @RequestParam("signupPass") String signupPass) {
+		System.out.println("Signup - Email: " + signupEMail + ", Password: " + signupPass);
 		return HTMLUtils.getHtmlFromFile("src/main/resources/static/under-construction.html");
 	}
 }
