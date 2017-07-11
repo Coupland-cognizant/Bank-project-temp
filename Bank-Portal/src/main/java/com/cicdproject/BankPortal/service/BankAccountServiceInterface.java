@@ -1,13 +1,13 @@
 package com.cicdproject.BankPortal.service;
 
-import com.cicdproject.BankPortal.model.BankAccountInterface;
+import com.cicdproject.BankPortal.model.BankAccountModel;
 
 public interface BankAccountServiceInterface {
-	void create(BankAccountInterface newAccount);
+	void create(BankAccountModel newAccount);
 	
-	void update(BankAccountInterface existingAccount);
+	void update(BankAccountModel existingAccount);
 	
 	void delete(String email);
     
-    String fetchAccountByEMail(String email);
+	BankAccountModel fetchAccountByEMail(String email);
 }
