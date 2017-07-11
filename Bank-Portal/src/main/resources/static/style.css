@@ -31,10 +31,11 @@ body {
 .logo {
 	font-size: x-large;
 	font-weight: bold;
+	padding-left: 0px;
 }
 
 .copyright {
-	text-align: right;
+	text-align: center;
 }
 
 .content {

@@ -1,53 +1,92 @@
 <html>
-	<head>
+	<head>	
 		<title>CDJKMPR Banking</title>
 		<link rel="stylesheet" href="style.css"/>
 	</head>
 	<body>
 		<div class="banner">
-			<p class="logo">CDJKMPR Banking</p>
+		<p class="logo"><a href="http://localhost:9090/"><img src="bank.png" style="width:100px;height:100px;"></a>
+			CDJKMPR Banking</p>
 		</div>
 		
 		<div class="spacer"></div>
 				
 		<div class="content">
 			<div class="loginFormContainer">
-				<form method="POST" action="/login" id="loginForm">
-					<p class="center">Log In:</p>
+				<form method="POST" action="/login" id="loginForm" onclick="check(this.form)">
+					<p class="center">For existing users, log in here:</p><br>
 					<div class="table">
 						<div class="row">
 							<span class="label">Email:</span>
-							<input name="loginEMail"/>
+							<input type="text" size="30" placeholder="Enter your email" id="loginEmail" name="loginEMail" required/> 
 						</div>
 						<div class="row">
 							<span class="label">Password:</span>
-							<input type="password" name="loginPass"/>
+							<input type="password" size="31" placeholder="Enter your password" id="loginPass" name="loginPass" required/>
 						</div>
 					</div>
-					<input type="submit" value="Log In">
+					<br>
+					<input type="submit" id="loginSubmit" value="Log In">
+					<button type="button" class="cancelbtn">Cancel</button>
+					<input type="checkbox" checked="checked"> Remember me
+		
 				</form>
 			</div>
 			
 			<div class="signupFormContainer">
-				<form method="POST" action="/signup" id="signupForm">
-					<p class="center">Sign Up:</p>
+				<form method="POST" action="/signup" id="signupForm" onSubmit="return validateSignup();">
+					<p class="center">For new users, sign up here:</p><br>
 					<div class="table">
 						<div class="row">
 							<span class="label">Email:</span>
-							<input name="signupEMail"/>
+							<input type="text" size="30" placeholder="Enter your email" name="signupEMail" required/>
 						</div>
 						<div class="row">
 							<span class="label">Password:</span>
-							<input type="password" name="signupPass"/>
+							<input type="password" size="31" placeholder="Enter your password" name="signupPass" required/>
 						</div>
 					</div>
-					<input type="submit" value="Sign Up">
+					<br>
+					<input type="submit" id="signupSubmit" value="Sign Up">
+					<button type="button" class="cancelbtn">Cancel</button>
 				</form>
 			</div>
 		</div>
 		
+		<script>
+		function check(form) {
+
+		    if (form.loginEmail.value == "myloginEmail" && (form.loginPass.value == "myloginPass") {
+		        text = "Input valid";
+		    } else {
+		    	text = "Input invalid";
+		    	return false;
+		    }
+		    
+		    return true;
+		}
+		
+	
+		function validateSignup() {
+		    var x, y;
+
+		    x = document.getElementById("signupEmail").value;
+		    y = document.getElementById("signupPass").value;
+
+		    if ((signupEmail.length > 0 && signupEmail.length <= 254) && (signupPass.length > 0 && signupPass.length <= 60)) {
+		        text = "Input valid";   
+		    } else {
+		        text = "Input invalid";
+		        return false;
+		    }
+		    
+		    return true;
+		}
+		</script>
+
+		
 		<div class="footer">
-			<p class="copyright">&copy; CDJKMPR Banking</p>
+			<p class="copyright">&copy; Copyright 2017 CDJKMPR Banking - All Rights Reserved</p>
 		</div>
 	</body>
 </html>
