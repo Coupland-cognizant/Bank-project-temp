@@ -43,11 +43,7 @@ public class BankAccountDAOInterfaceImpl implements BankAccountDAOInterface {
 		
 	}
 	
-	public List<BankAccountInterface> getAllUserAccounts() {
-		// This query is the equivelent of "SELECT * FROM USER_ACCOUNTS"
-		// no idea why we use "from <entity type>", but it works
-		return entityManager.createQuery("from BankAccountInterface", BankAccountInterface.class).getResultList();
-	}
+	
 	
 
 }
