@@ -34,7 +34,8 @@ public class HomePageController {
 		System.out.println("Signup - Email: " + loginEMail + ", Password: " + loginPass);
 		BankAccountModel bankModel = bankAccountService.fetchAccountByEMail(loginEMail);
 		if(bankModel != null && bankModel.getEmail().length() > 0 && bankModel.getEmail().length() <= 254
-				&& bankModel.getPassword().length() > 0 && bankModel.getPassword().length() <= 60) 
+				&& bankModel.getPassword().length() > 0 && bankModel.getPassword().length() <= 60
+				&& bankModel.getPassword().equals(loginPass)) 
 		{
 			return HTMLUtils.getHtmlFromFile("src/main/resources/static/success.html");
 		}

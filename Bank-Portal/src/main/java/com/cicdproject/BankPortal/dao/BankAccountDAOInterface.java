@@ -7,7 +7,7 @@ public interface BankAccountDAOInterface {
 
     void update(BankAccountModel bankAccount);
 
-    BankAccountModel getUserAccountByUserName(String email);
+    BankAccountModel getAccountByEMail(String email);
 
     void delete(String email);
 }

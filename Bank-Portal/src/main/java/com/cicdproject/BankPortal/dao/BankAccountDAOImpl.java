@@ -10,7 +10,7 @@ import org.springframework.stereotype.Repository;
 import com.cicdproject.BankPortal.model.BankAccountModel;
 
 @Repository
-public class BankAccountDAOInterfaceImpl implements BankAccountDAOInterface {
+public class BankAccountDAOImpl implements BankAccountDAOInterface {
 	
 	@PersistenceContext
 	private EntityManager entityManager;
@@ -26,14 +26,14 @@ public class BankAccountDAOInterfaceImpl implements BankAccountDAOInterface {
 	}
 
 	@Override
-	public BankAccountModel getUserAccountByUserName(String email) {
+	public BankAccountModel getAccountByEMail(String email) {
 		
 		return entityManager.find(BankAccountModel.class, email);
 	}
 
 	@Override
 	public void delete(String email) {
-		BankAccountModel bankReference=getUserAccountByUserName(email);
+		BankAccountModel bankReference=getAccountByEMail(email);
 		if (bankReference != null) {
             entityManager.remove(bankReference);
         } else {

@@ -7,14 +7,14 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.cicdproject.BankPortal.dao.BankAccountDAOInterface;
-import com.cicdproject.BankPortal.dao.BankAccountDAOInterfaceImpl;
+import com.cicdproject.BankPortal.dao.BankAccountDAOImpl;
 import com.cicdproject.BankPortal.model.BankAccountModel;
 
 @Service
 @Transactional
 public class BankAccountServiceImpl implements BankAccountServiceInterface {
     @Autowired
-	private BankAccountDAOInterfaceImpl bankAccountDAOInterface;
+	private BankAccountDAOImpl bankAccountDAOInterface;
 	 
 	@Override
 	public void create(BankAccountModel newAccount) {
@@ -33,7 +33,7 @@ public class BankAccountServiceImpl implements BankAccountServiceInterface {
 
 	@Override
 	public BankAccountModel fetchAccountByEMail(String email) {
-		BankAccountModel accountReference = bankAccountDAOInterface.getUserAccountByUserName(email);
+		BankAccountModel accountReference = bankAccountDAOInterface.getAccountByEMail(email);
 		if (accountReference != null) {
 			return accountReference;
 		}
