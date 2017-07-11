@@ -7,7 +7,7 @@ body {
 }
 
 .banner, .footer {
-	background-color: lightblue;
+	background-color: cornflowerblue;
 	width: 100vw;
 }
 
@@ -16,26 +16,40 @@ body {
 	bottom: 0;
 }
 
-.logo, .copyright {
+.logo, .copyright, .warning {
 	margin: 0;
 	padding: 1em;
 	color: white;
 	font-family: Verdana;
+}
+
+.logo, .warning {
+	font-size: x-large;
+	font-weight: bold;
+	/*padding-left: 0px;*/
+}
+
+.logo > * {
+    vertical-align:middle;
+    display: inline-block;
+}
+
+.logoImage {
+	width: 80px;
+	height: 80px;
+	padding-right: 1em;
+}
+
+.copyright {
+	text-align: center;
+}
+
+.warning {
 	text-shadow:
  		-1px -1px 0 dodgerblue,  
  		1px -1px 0 dodgerblue,
  		-1px 1px 0 dodgerblue,
   		1px 1px 0 dodgerblue;
-}
-
-.logo {
-	font-size: x-large;
-	font-weight: bold;
-	padding-left: 0px;
-}
-
-.copyright {
-	text-align: center;
 }
 
 .content {
@@ -57,9 +71,14 @@ body {
 .banner, .footer {
 	box-shadow: 0px 0px 8px lightslategrey;
 }
+
 #signupForm, #loginForm {
 	margin: 0;
 	padding: 0.5em;
+}
+
+#loginWarning, #signupWarning {
+	color: darkred;
 }
 
 .spacer {
