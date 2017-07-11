@@ -8,6 +8,6 @@ public interface BankAccountInterface {
 	
 	public String getPassword();
 	
-	public void setPassword();
+	public void setPassword(String password);
 
 }
