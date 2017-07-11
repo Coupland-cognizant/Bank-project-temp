@@ -7,7 +7,7 @@ import javax.persistence.PersistenceContext;
 
 import org.springframework.stereotype.Repository;
 
-import com.cicdproject.BankPortal.model.BankAccountInterface;
+import com.cicdproject.BankPortal.model.BankAccountModel;
 
 @Repository
 public class BankAccountDAOInterfaceImpl implements BankAccountDAOInterface {
@@ -16,24 +16,24 @@ public class BankAccountDAOInterfaceImpl implements BankAccountDAOInterface {
 	private EntityManager entityManager;
 
 	@Override
-	public void create(BankAccountInterface bankAccount) {
+	public void create(BankAccountModel bankAccount) {
 		entityManager.persist(bankAccount);
 	}
 
 	@Override
-	public void update(BankAccountInterface bankAccount) {
+	public void update(BankAccountModel bankAccount) {
 		entityManager.merge(bankAccount);
 	}
 
 	@Override
-	public BankAccountInterface getUserAccountByUserName(String email) {
+	public BankAccountModel getUserAccountByUserName(String email) {
 		
-		return entityManager.find(BankAccountInterface.class, email);
+		return entityManager.find(BankAccountModel.class, email);
 	}
 
 	@Override
 	public void delete(String email) {
-		BankAccountInterface bankReference=getUserAccountByUserName(email);
+		BankAccountModel bankReference=getUserAccountByUserName(email);
 		if (bankReference != null) {
             entityManager.remove(bankReference);
         } else {

@@ -1,13 +1,13 @@
 package com.cicdproject.BankPortal.dao;
 
-import com.cicdproject.BankPortal.model.BankAccountInterface;
+import com.cicdproject.BankPortal.model.BankAccountModel;
 
 public interface BankAccountDAOInterface {
-	void create(BankAccountInterface bankAccount);
+	void create(BankAccountModel bankAccount);
 
-    void update(BankAccountInterface bankAccount);
+    void update(BankAccountModel bankAccount);
 
-    BankAccountInterface getUserAccountByUserName(String email);
+    BankAccountModel getUserAccountByUserName(String email);
 
     void delete(String email);
 }

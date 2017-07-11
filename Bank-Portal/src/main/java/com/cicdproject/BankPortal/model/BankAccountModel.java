@@ -9,13 +9,12 @@ import javax.persistence.Column;
 
 @Entity
 @Table(name = "BankUserAccounts")
-public class BankAccountModelImpl implements BankAccountInterface{
-	
+public class BankAccountModel {
 	
 	@Id
 	@Column(name="UserEmail")
 	@NotNull
-	@Size(max=200)
+	@Size(max=254)
 	private java.lang.String userEmail;
 	
 	@Column(name="UserPassword")
@@ -23,13 +22,13 @@ public class BankAccountModelImpl implements BankAccountInterface{
 	@Size(max=60)
 	private java.lang.String userPassword;
 	
-	public BankAccountModelImpl()
+	public BankAccountModel()
 	{
 		userEmail = "";
 		userPassword = "";
 	}
 	
-	public BankAccountModelImpl(String userEmail, String userPassword) {
+	public BankAccountModel(String userEmail, String userPassword) {
 		this.userEmail = userEmail;
 		this.userPassword = userPassword;
 	}
